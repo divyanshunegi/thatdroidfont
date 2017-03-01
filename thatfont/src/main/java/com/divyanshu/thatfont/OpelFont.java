@@ -42,7 +42,7 @@ public class OpelFont extends TextView {
         int typeFace;
         TypedArray ta = getTypedArray(context,attrs, R.styleable.ThatFontType);
         try {
-            typeFace = ta.getInt(R.styleable.ThatFontType_android_textStyle, Typeface.BOLD);
+            typeFace = ta.getInt(R.styleable.ThatFontType_android_textStyle, Typeface.NORMAL);
         } finally {
             ta.recycle();
         }
@@ -60,7 +60,7 @@ public class OpelFont extends TextView {
                      type = "Opel_Sans_Bold.ttf";
                     break;
                 case 2:
-                     type = "Opel_Sans_Regular.ttf";
+                     type = "Opel_Sans_Italic.ttf";
                     break;
             }
 
