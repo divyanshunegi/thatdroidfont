@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FontDroid.iml" filepath="$PROJECT_DIR$/FontDroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thatdroidfont.iml" filepath="$PROJECT_DIR$/thatdroidfont.iml" />
       <module fileurl="file://$PROJECT_DIR$/thatfont/thatfont.iml" filepath="$PROJECT_DIR$/thatfont/thatfont.iml" />
     </modules>
   </component>
