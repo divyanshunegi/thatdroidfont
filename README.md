@@ -15,9 +15,14 @@ allprojects {
 ```
 Step 2. Add the dependency
 
-```dependencies {
-	        compile 'com.github.divyanshunegi:ThatFont:v1.0'
-	}```
+```
+dependencies {
+
+		compile 'com.github.divyanshunegi:thatdroidfont:v1.0'
+		
+	}
+	
+```
   
   To use this file in your Android layout simply add these views
   
