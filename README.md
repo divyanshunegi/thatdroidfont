@@ -18,7 +18,7 @@ Step 2. Add the dependency
 ```
 dependencies {
 
-		compile 'com.github.divyanshunegi:thatdroidfont:v1.0'
+		compile 'com.github.divyanshunegi:thatdroidfont:v1.2'
 		
 	}
 	
@@ -38,3 +38,4 @@ dependencies {
   ```
   
   You can set textStyle to normal,bold or italic depending on the availability of font inside the library it will diplay the font. 
+  in case you do not define any textstyle it will be normal by default
