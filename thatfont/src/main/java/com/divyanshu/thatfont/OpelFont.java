@@ -3,8 +3,6 @@ package com.divyanshu.thatfont;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
@@ -15,7 +13,7 @@ import android.widget.TextView;
 
 public class OpelFont extends TextView {
 
-    private Typeface mTypeface;
+    private static Typeface[] mTypeface = new Typeface[3];
 
     public OpelFont(Context context) {
         super(context);
@@ -32,11 +30,6 @@ public class OpelFont extends TextView {
         init(context,attrs);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public OpelFont(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init(context,attrs);
-    }
 
     private void init(Context context, AttributeSet attrs) {
         int typeFace;
@@ -46,12 +39,13 @@ public class OpelFont extends TextView {
         } finally {
             ta.recycle();
         }
-        setTypeFace(context,typeFace);
+
+        setCustomTypeFace(context,typeFace);
     }
 
-    private void setTypeFace(Context context, int typeFace) {
+    private void setCustomTypeFace(Context context, int typeFace) {
         String type = "Opel_Sans_Regular.ttf";
-        if (mTypeface == null) {
+        if (mTypeface[typeFace] == null) {
             switch (typeFace){
                 case 0:
                      type = "Opel_Sans_Regular.ttf";
@@ -63,10 +57,10 @@ public class OpelFont extends TextView {
                      type = "Opel_Sans_Italic.ttf";
                     break;
             }
-
-            mTypeface = Typeface.createFromAsset(context.getAssets(), type);
+            mTypeface[typeFace] = Typeface.createFromAsset(context.getAssets(), type);
         }
-        setTypeface(mTypeface);
+
+        super.setTypeface(mTypeface[typeFace]);
     }
 
     protected TypedArray getTypedArray(Context context, AttributeSet attributeSet, int[] attr) {
