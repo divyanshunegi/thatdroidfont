@@ -3,29 +3,29 @@ package com.divyanshu.thatfont;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
+import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
 /**
  * Created by divyanshunegi on 3/1/17.
  * Project : CustomFontSample
  */
 
-public class OpelFont extends TextView {
+public class AutoCompleteOpelFont extends AppCompatAutoCompleteTextView {
 
     private static Typeface[] mTypeface = new Typeface[3];
 
-    public OpelFont(Context context) {
+    public AutoCompleteOpelFont(Context context) {
         super(context);
         init(context,null);
     }
 
-    public OpelFont(Context context, AttributeSet attrs) {
+    public AutoCompleteOpelFont(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context,attrs);
     }
 
-    public OpelFont(Context context, AttributeSet attrs, int defStyleAttr) {
+    public AutoCompleteOpelFont(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context,attrs);
     }
